@@ -47,7 +47,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
         // set the title and overview and Language
         tvTitle.setText(movie.getTitle());
         tvOverview.setText(movie.getOverview());
-        tvLang.setText(movie.getLanguage());
+        tvLang.setText(movie.getLanguage() + ", Popularity: " + movie.getPop() +"%");
         String imageUrl = movie.getBackdropPath();
 
         // Check if in landscape to adjust size and pick image

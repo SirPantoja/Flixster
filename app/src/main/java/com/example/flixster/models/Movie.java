@@ -18,12 +18,14 @@ public class Movie {
     String language;
     Double voteAverage;
     Integer id;
+    Double pop;
 
     public Movie(JSONObject jsonObject) throws JSONException {
         backdropPath = jsonObject.getString("backdrop_path");
         posterPath = jsonObject.getString("poster_path");
         title = jsonObject.getString("title");
         overview = jsonObject.getString("overview");
+        pop = jsonObject.getDouble("popularity");
         if (overview.length() > 350)
         {
             overview = overview.substring(0, 350);
@@ -73,4 +75,7 @@ public class Movie {
         return voteAverage;
     }
 
+    public Double getPop() {
+        return pop;
+    }
 }
